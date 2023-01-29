@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ASPMVC_DZ2.Models.City>
+
+<h2>Список городов по областям</h2>
+<table class="table">
+     <tr><th>Имя</th><th>Возраст</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.area.Name</td>
+        </tr>
+    }
+</table>

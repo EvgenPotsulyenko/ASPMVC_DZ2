@@ -1,0 +1,26 @@
+﻿@model ASPMVC_DZ2.Models.ViewModels
+
+<<h2>Добавление области</h2>
+<form asp-action="create" asp-controller="home">
+    <p>
+        <label asp-for="Areas.Name">Название</label><br />
+        <input type="text" asp-for="Areas.Name"/>
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+<<h2>Добавление города</h2>
+<form asp-action="CreateCity" asp-controller="home">
+    <p>    
+        <label asp-for="Cyties.Name">Название</label><br />
+        <input type="text" asp-for="Cyties.Name" />
+    </p>  
+    <p>
+        <label asp-for="Cyties.area.Name">Область</label><br />
+        <input type="text" asp-for="Cyties.area.Name" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
